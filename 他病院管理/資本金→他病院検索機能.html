@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資本金→他病院検索</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h2>資本金→他病院検索</h2>
+    <form action="/search_hospitals_by_capital" method="post">
+        <label for="capital">資本金（万円）:</label><br>
+        <input type="number" id="capital" name="capital" min="0" required><br><br>
+        <input type="submit" value="検索">
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>薬投与指示</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h2>薬投与指示</h2>
+    <form action="/confirm_medication" method="post">
+        <label for="medication">薬剤名:</label><br>
+        <select id="medication" name="medication">
+            <option value="medication1">薬剤1</option>
+            <option value="medication2">薬剤2</option>
+            <option value="medication3">薬剤3</option>
+        </select><br><br>
+        <label for="quantity">数量:</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+        <input type="submit" value="確認">
+    </form>
+</body>
+</html>

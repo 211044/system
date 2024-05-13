@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>患者保険証変更</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h2>患者保険証変更</h2>
+    <form action="/update_insurance_info" method="post">
+        <label for="patient_id">患者ID:</label><br>
+        <input type="text" id="patient_id" name="patient_id" required><br>
+        <label for="insurance_number">新しい保険証記号番号:</label><br>
+        <input type="text" id="insurance_number" name="insurance_number"><br>
+        <label for="expiration_date">新しい有効期限:</label><br>
+        <input type="text" id="expiration_date" name="expiration_date"><br><br>
+        <input type="submit" value="変更確認">
+    </form>
+</body>
+</html>

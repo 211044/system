@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン画面</title>
+</head>
+<body>
+    <h2>ログイン</h2>
+    <form id="loginForm" onsubmit="return validateForm()">
+        <label for="username">ユーザーID:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">パスワード:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="ログイン">
+    </form>
+    <div id="errorMessage" style="color: red;"></div>
+
+    <script>
+        function validateForm() {
+            // フォームの値を取得
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // サーバーに送信する処理（ここでは省略）
+
+            // ログインチェックの仮の処理
+            if (username === "admin" && password === "admin_password") {
+                // ログイン成功時の処理（メニュー画面へのリダイレクトなど）
+                alert("ログイン成功！");
+                return true;
+            } else {
+                // ログイン失敗時の処理（エラーメッセージを表示）
+                document.getElementById("errorMessage").innerText = "ユーザーIDまたはパスワードが間違っています。";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>処置履歴確認</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h2>処置履歴確認</h2>
+    <form action="/confirm_treatment_history" method="post">
+        <label for="patient_id">患者ID:</label><br>
+        <input type="text" id="patient_id" name="patient_id" required><br><br>
+        <input type="submit" value="確認">
+    </form>
+    <!-- Display treatment history here -->
+    <div id="treatment_history">
+        <!-- Treatment history will be displayed here -->
+    </div>
+    <br>
+    <form action="/menu" method="get">
+        <input type="submit" value="メニューに戻る">
+    </form>
+    <form action="/search_patient" method="get">
+        <input type="submit" value="患者IDを指定する">
+    </form>
+</body>
+</html>
